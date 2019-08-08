@@ -108,7 +108,7 @@ $(document).ready(function () {
             .attr("height", h)
             .attr("preserveAspectRatio", "none")
             //image link
-            .attr("xlink:href", "../assets/img/choropleth_legend2.png");
+            .attr("xlink:href", "./assets/img/choropleth_legend2.png");
 
         g.append("text")
             .attr("class", "caption")
@@ -156,15 +156,15 @@ $(document).ready(function () {
         colorOut.domain([minMove, 0]);
 
 
-        d3.json("../assets/geo_json/sd_geo_grouped.json", function (json) {
+        d3.json("./assets/geo_json/sd_geo_grouped.json", function (json) {
             loadJson(csv_data, json, mapGroup, ani_path, 'dist-main');
         });
 
-        d3.json("../assets/geo_json/lower_mainland_sub.json", function (json) {
+        d3.json("./assets/geo_json/lower_mainland_sub.json", function (json) {
             loadJson(csv_data, json, mapGroup_lm, ani_path_lm, 'dist-lm');
         });
 
-        d3.json("../assets/geo_json/southern_vancouver_island.json", function (json) {
+        d3.json("./assets/geo_json/southern_vancouver_island.json", function (json) {
             loadJson(csv_data, json, mapGroup_svi, ani_path_svi, 'dist-svi');
         });
     }
@@ -265,12 +265,12 @@ $(document).ready(function () {
 
     // queue to load the multiple datasets
     d3.queue()
-        .defer(d3.csv, '../assets/raw_data/sd_going_2018.csv')
-        .defer(d3.csv, '../assets/raw_data/sd_going_2017.csv')
-        .defer(d3.csv, '../assets/raw_data/sd_going_2016.csv')
-        .defer(d3.csv, '../assets/raw_data/sd_going_2015.csv')
-        .defer(d3.csv, '../assets/raw_data/sd_going_2014.csv')
-        .defer(d3.csv, '../assets/raw_data/sd_going_2013.csv')
+        .defer(d3.csv, './assets/raw_data/sd_going_2018.csv')
+        .defer(d3.csv, './assets/raw_data/sd_going_2017.csv')
+        .defer(d3.csv, './assets/raw_data/sd_going_2016.csv')
+        .defer(d3.csv, './assets/raw_data/sd_going_2015.csv')
+        .defer(d3.csv, './assets/raw_data/sd_going_2014.csv')
+        .defer(d3.csv, './assets/raw_data/sd_going_2013.csv')
         .await(function (error, d2018, d2017, d2016, d2015, d2014, d2013) {
             data['2013'] = d2013;
             data['2014'] = d2014;

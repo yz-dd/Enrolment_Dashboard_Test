@@ -184,7 +184,7 @@ $(document).ready(function () {
       let outdomain = [movein_min, movein_max];
       let fillcolor = d3.scaleLinear().range(colors).domain(indomain);
 
-      d3.json("../assets/geo_json/sd_geo.json", function (error, json) {
+      d3.json("./assets/geo_json/sd_geo.json", function (error, json) {
         if (error) throw error;
 
         /* 
@@ -376,7 +376,7 @@ $(document).ready(function () {
   }
 
   //default map
-  updateMap("../assets/raw_data/sd_coming_2018.csv", "../assets/raw_data/sd_going_2018.csv");
+  updateMap("./assets/raw_data/sd_coming_2018.csv", "./assets/raw_data/sd_going_2018.csv");
 
   function toolOver(v, thepath) {
     d3.select(thepath)
@@ -701,7 +701,7 @@ $(document).ready(function () {
         let newData = d3.select(this).attr('data-value');
         //clear dropdown array
         // sd_list_arr=[];
-        updateMap("../assets/raw_data/sd_coming_" + newData + ".csv", "../assets/raw_data/sd_going_" + newData + ".csv");
+        updateMap("./assets/raw_data/sd_coming_" + newData + ".csv", "./assets/raw_data/sd_going_" + newData + ".csv");
         resetBtn();
       });
   });

@@ -104,7 +104,7 @@ $(document).ready(function () {
             .remove();
     }
 
-    d3.csv('../assets/raw_data/retention_province.csv', function (error, data) {
+    d3.csv('./assets/raw_data/retention_province.csv', function (error, data) {
         if (error) {
             throw error;
         }
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
         function retentionUpdate(dist) {
 
-            d3.csv('../assets/raw_data/retention_district.csv', function (error, data) {
+            d3.csv('./assets/raw_data/retention_district.csv', function (error, data) {
                 if (error) {
                     throw error;
                 }

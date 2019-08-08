@@ -101,7 +101,7 @@
         .attr("class", "modeltt_rect")
         .style('display', 'none');
 
-    d3.csv('../assets/raw_data/key_drivers.csv', function (error, data) {
+    d3.csv('./assets/raw_data/key_drivers.csv', function (error, data) {
         if (error) {
             throw error;
         }
