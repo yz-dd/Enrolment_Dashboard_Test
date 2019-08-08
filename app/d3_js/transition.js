@@ -223,7 +223,7 @@ $(document).ready(function () {
 
     function graphUpdate(year) {
 
-        d3.csv('../assets/raw_data/transition_province.csv', function (error, data) {
+        d3.csv('./assets/raw_data/transition_province.csv', function (error, data) {
             if (error) {
                 throw error;
             }
@@ -265,7 +265,7 @@ $(document).ready(function () {
 
     function transUpdate(year, dist, type) {
 
-        d3.csv('../assets/raw_data/transition_district.csv', function (error, data) {
+        d3.csv('./assets/raw_data/transition_district.csv', function (error, data) {
 
             if (error) {
                 throw error;

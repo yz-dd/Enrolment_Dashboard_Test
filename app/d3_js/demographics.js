@@ -45,7 +45,7 @@ $(document).ready(function () {
         .append('g')
         .attr('class', 'legendContainer');
 
-    d3.csv('../assets/raw_data/demographics.csv', function (error, data) {
+    d3.csv('./assets/raw_data/demographics.csv', function (error, data) {
         if (error) {
             throw error;
         }
