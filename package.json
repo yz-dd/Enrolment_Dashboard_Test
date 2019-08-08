@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yz-dd/Enrolment_Dashboard_Test/issues"
+    "url": "https://yz-dd.github.io/Enrolment_Dashboard_Test"
   },
-  "homepage": "https://github.com/yz-dd/Enrolment_Dashboard_Test.git",
+  "homepage": "https://github.com/yz-dd/Enrolment_Dashboard_Test",
   "dependencies": {
     "gh-pages": "^2.0.1"
   }
