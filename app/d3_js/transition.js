@@ -429,7 +429,7 @@ $(document).ready(function () {
                         .attr("y", function (d) {
                             if (trans_type == 'NET_INDEPENDENT') { return trans_yScale(d[type]) + 20; }
                             else {
-                                return trans_yScale(Math.abs(d[type]) - 35);
+                                return trans_yScale(Math.abs(d[type]) - 40);
                             }
                         })
                         .attr('text-anchor', 'middle')
@@ -496,7 +496,7 @@ $(document).ready(function () {
                         .attr("y", function (d) {
                             if (trans_type == 'NET_INDEPENDENT') { return trans_yScale(d[type]) + 20; }
                             else {
-                                return trans_yScale(Math.abs(d[type]) - 35);
+                                return trans_yScale(Math.abs(d[type]) - 40);
                             }
                         })
                         .attr('text-anchor', 'middle')
@@ -559,8 +559,9 @@ $(document).ready(function () {
         .text('SD99-Province')
         .attr('data-value', 'SD99');
 
-    for (let i = 0; i < sd_arr.length; i++) {
-        let opt = sd_arr[i];
+    let transition_sd_arr = sd_arr.slice();
+    for (let i = 0; i < transition_sd_arr.length; i++) {
+        let opt = transition_sd_arr[i];
 
         d3.select('#trans_dist_dropdown .list')
             .append('div')

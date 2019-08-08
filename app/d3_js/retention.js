@@ -66,9 +66,10 @@ $(document).ready(function () {
         .append('svg')
         .attr('class', 'retention_legend col-5');
 
+    let retention_sd_arr = sd_arr.slice();
     //populate dropdown menu
-    for (let i = 0; i < sd_arr.length; i++) {
-        let opt = sd_arr[i];
+    for (let i = 0; i < retention_sd_arr.length; i++) {
+        let opt =  retention_sd_arr[i];
         d3.select('#retention_distDropdown .list')
             .append('div')
             .text(opt)
