@@ -16,8 +16,8 @@
   "bugs": {
     "url": "https://github.com/yz-dd/Enrolment_Dashboard_Test/issues"
   },
-  "homepage": "https://yz-dd.github.io/Enrolment_Dashboard_Test",
+  "homepage": "https://github.com/yz-dd/Enrolment_Dashboard_Test.git",
   "dependencies": {
-    "gh-pages": "^2.1.0"
+    "gh-pages": "^2.0.1"
   }
 }
