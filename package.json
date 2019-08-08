@@ -1,0 +1,23 @@
+{
+  "name": "Enrolment_Dashboard_Test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yz-dd/Enrolment_Dashboard_Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yz-dd/Enrolment_Dashboard_Test/issues"
+  },
+  "homepage": "https://yz-dd.github.io/Enrolment_Dashboard_Test",
+  "dependencies": {
+    "gh-pages": "^2.1.0"
+  }
+}
