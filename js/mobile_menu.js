@@ -37,4 +37,24 @@ $(document).on('click', function(et) {
   }
 });
 
+//for IE, IE 11, edge
+if (navigator.userAgent.indexOf('MSIE ')>0 || navigator.userAgent.match(/Trident.*rv\:11\./) || navigator.userAgent.indexOf('Edge')>0) {
+  alert("Please use Chrome or Firefox for best experience.");
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+ }
+
 });

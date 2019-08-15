@@ -19,7 +19,7 @@ $(document).ready(function () {
     center: [54, -124],
     zoom: 5
   })
-    .addLayer(new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
+    .addLayer(new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
 
   //create the projection expression
   // let projection = d3.geoAlbers()
