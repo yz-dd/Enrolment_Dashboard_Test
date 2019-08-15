@@ -139,12 +139,11 @@
                 }
             }
 
-
             //starting year, min val of the array
             minYr = Math.min(...range_arr);
             //ending year
             maxYr = Math.max(...range_arr);
-
+        
             //populate dropdown menu
             let dropDown = d3.select('#model_distDropdown .list');
             dropDown.append('div')
@@ -409,12 +408,13 @@
                         d3.select('#distName').text(distName);
 
                         if (distName == 'SD99-Province') {
-                            d3.select('a.reportBtn').attr('href', 'https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/reporting-on-k-12/district-reports');
+                            d3.select('a.reportBtn').attr('href', 'https://studentsuccess.gov.bc.ca/provincial-results');
                         } else {
                             //replace space with dash and covert to lower case '/ /g' is a regex (regular expression). The flag g means global. It causes all matches to be replaced.
-                            let sdLink = distName.substring(5, distName.length).replace(/ - /g, ' ').replace(/ /g, '-').toLocaleLowerCase();
+                            // let sdLink = distName.substring(5, distName.length).replace(/ - /g, ' ').replace(/ /g, '-').toLocaleLowerCase();
+                            let sdNum = distName.substring(2,4);
                             //set dynamic href for each sd
-                            d3.select('a.reportBtn').attr('href', 'https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/program-management/reporting-on-k-12/district-reports/' + sdLink);
+                            d3.select('a.reportBtn').attr('href', 'https://studentsuccess.gov.bc.ca/school-district/0' + sdNum);
                         }
                         //set aixs
                         model_xScale.domain(districtData.map(function (d) { return d.SCHOOL_YEAR; }));

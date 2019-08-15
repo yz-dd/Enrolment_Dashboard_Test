@@ -7014,6 +7014,16 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      /* IE10+ CSS styles go here */
+      html body #aniContainer #animationMap .svg-content {
+        width: 600px;
+        height: 400px; }
+      
+      html body #retention .isometric_img{
+        width: 100%;
+      }}
+
 /* student success */
 @media only screen and (min-width: 320px) {
   .restrain {

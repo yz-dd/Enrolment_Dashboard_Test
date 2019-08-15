@@ -556,7 +556,7 @@ $(document).ready(function () {
 
     trans_dd
         .append('div')
-        .text('SD99-Province')
+        .text('SD99-Province (all districts)')
         .attr('data-value', 'SD99');
 
     let transition_sd_arr = sd_arr.slice();

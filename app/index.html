@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>BC Enrolment Booklet</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
@@ -50,14 +51,13 @@
 
   <div class="navbar navbar-expand-lg fixed-top nav-bg">
 
-    <!-- hamburger menu -->
-    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <div class="navbar-toggler mx-auto" data-toggle="collapse" data-target="#navbarSupportedContent">
       <div class="icon">
         <span class="line top"></span>
         <span class="line middle"></span>
         <span class="line bottom"></span>
       </div>
-    </button>
+    </div>
     <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
@@ -85,7 +85,7 @@
       <div class="col-sm-12 col-md-5">
         <h2 class="intro_header">Enrolment Model</h2>
         <p>Student enrolment is influenced by four main drivers: demographics, migration, public-independent
-          transition, and course load retention. All values are reported in funded Full-Time Equivalent (FTE).</p>
+          transition, and course load retention. All values are reported in funded <a href="https://studentsuccess.gov.bc.ca/glossary#79" target="_blank">Full-Time Equivalent (FTE)</a>.</p>
         <div class="cta_container mt-5">
           <a class="btn ctaBtn btn-lg mr-3" href="#enrolment_model">EXPLORE</a>
           <a class="btn ctaGhost btn-lg" href="#booklet">STATIC REPORT</a>
@@ -147,7 +147,7 @@
       <div class="col-md-8 mx-auto driver_section">
         <h3 class="section_header text-center"><span>Demographics</span></h3>
         <p>The demographics driver provides an indication of whether more kindergarten students are entering B.C. public
-          schools relative for those leaving the school system through graduation. If the Net Demographics value is
+          schools relative for those leaving the school system through graduation. If the net demographics value is
           positive, it indicates that more five year olds are entering Kindergarten relative to the number of Grade 12
           students that are graduating.
         </p>
@@ -213,7 +213,7 @@
       <div class="col-sm-12 col-md-4">
         <h3 class="section_header"><span>Student Migration</span></h3>
         <p>The migration driver provides a measure of how many students are entering or leaving a district. It is
-          further broken down into Interprovincial migration, district to district migration, and International
+          further broken down into interprovincial migration, district to district migration, and international
           immigration. District to district migration is a transfer of students within the province, where as
           interprovincial or international migration involves students entering or exiting the Public School System
           external to B.C and external to Canada.
@@ -223,7 +223,8 @@
       </div>
       <div class="col-sm-12 col-md-8">
         <div id="aniContainer">
-          <div id="animationMap"></div>
+          <div id="animationMap">
+          </div>
           <div id="ani_control" class="row">
             <div id="play-pause" class="play"></div>
             <div id="ani-slider" class="col-6"></div>
@@ -250,13 +251,13 @@
           <div class="controlSection">
             <h5>School Year</h5>
             <div id="yearDropdown" class="dropDown" tabindex="1">
-              <span>2017/2018</span>
+              <span>2018</span>
               <div class="list">
-                <div data-value="2018">2017/2018</div>
-                <div data-value="2017">2016/2017</div>
-                <div data-value="2016">2015/2016</div>
-                <div data-value="2015">2014/2015</div>
-                <div data-value="2014">2013/2014</div>
+                <div data-value="2018">2018</div>
+                <div data-value="2017">2017</div>
+                <div data-value="2016">2016</div>
+                <div data-value="2015">2015</div>
+                <div data-value="2014">2014</div>
               </div>
             </div>
           </div>
@@ -293,7 +294,7 @@
       <div class="col-md-8 mx-auto driver_section">
         <h3 class="section_header text-center"><span>Public-Independent Student Transition</span></h3>
         <p>The transition driver measures how many students move from the Independent School system to the Public School
-          system as a net positive outflow, and movement from the Public School system to the Independent School system
+          system as a net positive inflow, and movement from the Public School system to the Independent School system
           as a net negative outflow.</p>
       </div>
       <div class="col-sm-12 col-md-5">
