@@ -8,6 +8,69 @@ $(document).ready(function () {
     left: 60
   }; //height and width
 
+  //school district array, declared separately due to Grunt bundling issue with 
+  //Studentsucess site (global array from enrollment.js is not accessible)
+  var sd_arr = ["SD05-Southeast Kootenay"
+  ,"SD06-Rocky Mountain"
+  ,"SD08-Kootenay Lake"
+  ,"SD10-Arrow Lakes"
+  ,"SD19-Revelstoke"
+  ,"SD20-Kootenay - Columbia"
+  ,"SD22-Vernon"
+  ,"SD23-Central Okanagan"
+  ,"SD27-Cariboo - Chilcotin"
+  ,"SD28-Quesnel"
+  ,"SD33-Chilliwack"
+  ,"SD34-Abbotsford"
+  ,"SD35-Langley"
+  ,"SD36-Surrey"
+  ,"SD37-Delta"
+  ,"SD38-Richmond"
+  ,"SD39-Vancouver"
+  ,"SD40-New Westminster"
+  ,"SD41-Burnaby"
+  ,"SD42-Maple Ridge - Pitt Meadows"
+  ,"SD43-Coquitlam"
+  ,"SD44-North Vancouver"
+  ,"SD45-West Vancouver"
+  ,"SD46-Sunshine Coast"
+  ,"SD47-Powell River"
+  ,"SD48-Sea to Sky"
+  ,"SD49-Central Coast"
+  ,"SD50-Haida Gwaii - Queen Charlotte"
+  ,"SD51-Boundary"
+  ,"SD52-Prince Rupert"
+  ,"SD53-Okanagan Similkameen"
+  ,"SD54-Bulkley Valley"
+  ,"SD57-Prince George"
+  ,"SD58-Nicola - Similkameen"
+  ,"SD59-Peace River South"
+  ,"SD60-Peace River North"
+  ,"SD61-Greater Victoria"
+  ,"SD62-Sooke"
+  ,"SD63-Saanich"
+  ,"SD64-Gulf Islands"
+  ,"SD67-Okanagan Skaha"
+  ,"SD68-Nanaimo - Ladysmith"
+  ,"SD69-Qualicum"
+  ,"SD70-Alberni"
+  ,"SD71-Comox Valley"
+  ,"SD72-Campbell River"
+  ,"SD73-Kamloops - Thompson"
+  ,"SD74-Gold Trail"
+  ,"SD75-Mission Public"
+  ,"SD78-Fraser - Cascade"
+  ,"SD79-Cowichan Valley"
+  ,"SD81-Fort Nelson"
+  ,"SD82-Coast Mountains"
+  ,"SD83-Okanagan - Shuswap"
+  ,"SD84-Vancouver Island West"
+  ,"SD85-Vancouver Island North"
+  ,"SD87-Stikine"
+  ,"SD91-Nechako Lakes"
+  ,"SD92-Nisga"
+  ,"SD93-Conseil scolaire francophone"];
+
   var retention_height = 400 - retention_margin.top - retention_margin.bottom;
   var retention_width = 600 - retention_margin.left - retention_margin.right; //scales
 
@@ -58,7 +121,7 @@ $(document).ready(function () {
     distLine.exit();
     distLine.transition().duration(500).remove(); //clear existing legends
 
-    var existingLegend = d3.selectAll('.retention_legend .legend');
+    var existingLegend = d3.selectAll('.retention_legend .chart_legend');
     existingLegend.exit();
     existingLegend.transition().duration(100).remove(); //clear tooltips 
 
@@ -214,7 +277,7 @@ $(document).ready(function () {
         prov_retention_line.attr("stroke-dasharray", plineLength + " " + plineLength).attr("stroke-dashoffset", plineLength).transition().duration(1500).attr("stroke-dashoffset", 0);
         dist_retention_line.attr("stroke-dasharray", dlineLength + " " + dlineLength).attr("stroke-dashoffset", dlineLength).transition().duration(1500).attr("stroke-dashoffset", 0); //legends
 
-        var retention_legend = r_legendContainer.append('g').attr('class', 'legend');
+        var retention_legend = r_legendContainer.append('g').attr('class', 'chart_legend');
         retention_legend.append('rect').attr('x', 10).attr('y', 20).attr('width', 18).attr('height', 18).style('fill', '#002663');
         retention_legend.append('text').attr('x', 30).attr('y', 35).text('Province');
         retention_legend.append('rect').attr('x', 10).attr('y', 50).attr('width', 18).attr('height', 18).style('fill', '#FCBA19');
